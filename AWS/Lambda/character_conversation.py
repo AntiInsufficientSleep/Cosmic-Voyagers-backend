@@ -80,8 +80,8 @@ def get_character_data(character_id):
 
 def generate_prompt(template, user_message):
     # キャラクターデータに基づいて、ChatGPT APIに送るプロンプトを生成します
-    # この関数は、キャラクターのデータ構造に基づいてカスタマイズする必要があります
-    return template.replace('{message}', user_message)
+    # templateとuser_messageを連結してプロンプトを作成します
+    return template + user_message
 
 def call_chatgpt_api(prompt):
     # ChatGPT APIにプロンプトを送信し、応答を取得します
