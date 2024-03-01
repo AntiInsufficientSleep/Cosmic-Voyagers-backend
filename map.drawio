@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="vv3lefoXCv1OrBOCNWiO" name="ページ1">
-        <mxGraphModel dx="226" dy="628" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="758" dy="628" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="3" value="API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="120" y="200" width="40" height="30" as="geometry"/>
+                <mxCell id="3" value="API (POST /postConversation)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="200" width="170" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="&lt;h1&gt;Cosmic-Voyagers 拡張コンテンツ用&lt;/h1&gt;&lt;div&gt;必要機能&lt;/div&gt;&lt;div&gt;・プレイヤーとの会話機能&lt;/div&gt;&lt;div&gt;・ストーリー自動生成&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="120" y="80" width="420" height="120" as="geometry"/>
