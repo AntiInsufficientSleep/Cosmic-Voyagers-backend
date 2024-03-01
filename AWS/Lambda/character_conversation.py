@@ -24,9 +24,9 @@ def lambda_handler(event, context):
         }
     
     # リクエストパラメータを抽出
-    user_id = event.get('user_id')
-    character_id = event.get('character_id')
-    message = event.get('message')
+    user_id = body.get('user_id')
+    character_id = body.get('character_id')
+    message = body.get('message')
 
     # 基本的なバリデーション
     if not all([user_id, character_id, message]):
