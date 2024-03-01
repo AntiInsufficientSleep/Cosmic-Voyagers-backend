@@ -15,8 +15,9 @@ CONVERSATIONS_TABLE_NAME = 'CV_Conversations'  # 会話記録を格納
 def lambda_handler(event, context):
     # リクエストボディをJSONオブジェクトにパース
     try:
-        body = json.loads(event.get('body', '{}'))
-    except json.JSONDecodeError:
+        body = json.loads(event['body'])
+    except json.JSONDecodeError as e:
+        print("JSON解析エラー:", e)
         return {
             'statusCode': 400,
             'body': json.dumps({'error': 'リクエストボディの解析に失敗しました'})
@@ -107,4 +108,3 @@ def save_conversation(session_id, user_id, character_id, user_message, character
         'created_at': now,
         'updated_at': now
     })
-
