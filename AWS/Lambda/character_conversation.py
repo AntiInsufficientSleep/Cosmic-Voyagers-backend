@@ -35,7 +35,7 @@ def lambda_handler(event, context):
             return {'statusCode': 404, 'body': json.dumps({'error': 'キャラクターが見つかりません'})}
         
         # OpenAI実行
-        client = OpenAI(api_key=os.environ['CHAT_GPT_KEY'])
+        client = OpenAI(api_key=os.environ['API_KEY'])
 
         messages = [
             {"role": "system", "content": character_data['prompt_template']},
@@ -46,7 +46,7 @@ def lambda_handler(event, context):
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=messages,
-            temperature=0.7
+            temperature=0.7,
             max_tokens=150
         )
         
