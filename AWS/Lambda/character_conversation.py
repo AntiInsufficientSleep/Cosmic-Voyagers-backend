@@ -8,11 +8,11 @@ import time
 dynamodb = boto3.resource('dynamodb')
 
 # ここにテーブル名を指定します
-CHARACTERS_TABLE_NAME = 'Characters'  # キャラクター情報を格納するテーブル
-CONVERSATIONS_TABLE_NAME = 'Conversations'  # 会話記録を格納するテーブル
+CHARACTERS_TABLE_NAME = 'CV_Characters'  # キャラクター情報を格納するテーブル
+CONVERSATIONS_TABLE_NAME = 'CV_Conversations'  # 会話記録を格納するテーブル
 
 # OpenAI APIキーを設定します
-OPENAI_API_KEY = 'your_openai_api_key_here'
+OPENAI_API_KEY = os.environ['API_KEY']
 
 # OpenAIクライアントのセットアップ
 openai.api_key = OPENAI_API_KEY
@@ -105,4 +105,3 @@ def save_conversation(session_id, user_id, character_id, user_message, character
         'created_at': now,
         'updated_at': now
     })
-    
