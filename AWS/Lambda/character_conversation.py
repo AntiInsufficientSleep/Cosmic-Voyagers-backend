@@ -13,6 +13,15 @@ CHARACTERS_TABLE_NAME = 'CV_Characters'  # キャラクター情報を格納
 CONVERSATIONS_TABLE_NAME = 'CV_Conversations'  # 会話記録を格納
 
 def lambda_handler(event, context):
+    # リクエストボディをJSONオブジェクトにパース
+    try:
+        body = json.loads(event.get('body', '{}'))
+    except json.JSONDecodeError:
+        return {
+            'statusCode': 400,
+            'body': json.dumps({'error': 'リクエストボディの解析に失敗しました'})
+        }
+    
     # リクエストパラメータを抽出
     user_id = event.get('user_id')
     character_id = event.get('character_id')
@@ -98,3 +107,4 @@ def save_conversation(session_id, user_id, character_id, user_message, character
         'created_at': now,
         'updated_at': now
     })
+
